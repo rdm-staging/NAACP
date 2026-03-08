@@ -51,7 +51,7 @@ const donationParameters = {
     hideOtherLabel: false,
     disableFreeformOnPageLoad: false,
     donationStatements: {
-      show: true,
+      show: false,
       statement001: `$20 Monthly Donation Helps:`,
       statement002: `$23 Monthly Donation Helps:`,
       statement003: `$25 Monthly Donation Helps:`,

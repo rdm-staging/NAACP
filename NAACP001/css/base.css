@@ -1,21 +1,69 @@
 @charset "UTF-8";
 
+/* Verlag Book */
+@font-face {
+  font-family: "Verlag A";
+  src: url("../fonts/Verlag-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Verlag Light */
+@font-face {
+  font-family: "Verlag B";
+  src: url("../fonts/Verlag-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gothic CG No3 Regular */
+@font-face {
+  font-family: "GothicCGNo3";
+  src: url("../fonts/Gothic%20CG%20No3%20Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Flood */
+@font-face {
+  font-family: "Flood";
+  src: url("../fonts/Flood.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --mainColor: #002868;
   --bgColor: #efefef;
+  --mainFont: "Verlag A", serif;
+  --headingFont: "GothicCGNo3", sans-serif;
+  --mainFontLight: "Verlag B", serif;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
 body,
 input,
 select {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--mainFont);
   font-size: 14px;
 }
 
 img {
   width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headingFont);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -61,7 +109,7 @@ a {
 .content {
   width: 100%;
   position: absolute;
-  background: url("../images/bg.jpg") no-repeat 100% center / 150%;
+  background: url("../images/bg-2.webp") no-repeat 100% center / 150%;
   top: 0;
   left: 0;
   right: 0;
@@ -85,8 +133,6 @@ form header h1 {
   max-width: 400px;
   width: 100%;
   margin: auto;
-  font-family: "p22-mackinac-pro", serif;
-  font-weight: 700;
   font-style: normal;
   color: var(--mainColor);
 }
@@ -122,8 +168,7 @@ form select {
 .step-3 input,
 .step-3 select {
   font-size: 16px !important;
-  font-family: "Source Sans Pro", "Open Sans", Monsterrat, "Courier New",
-    sans-serif;
+  font-family: var(--mainFont);
   color: rgb(64, 64, 64);
   height: 40px;
   width: 100%;
@@ -263,6 +308,7 @@ body .donation-choice {
   border: 1px solid #c7c7c7;
   border-radius: 6px;
   background-color: #f8f8f8;
+  font-family: var(--mainFont);
   font-weight: 600;
   color: #000;
 }
@@ -336,19 +382,18 @@ body .donation-selected,
 
 .form-button,
 button:not(.close) {
-  height: 45px;
-  width: 175px;
-  border: 1px solid #e03e52;
+  height: 55px;
+  min-width: 300px;
+  border: 1px solid var(--mainColor);
   border-radius: 6px;
-  background-color: #e03e52;
+  background-color: var(--mainColor);
   line-height: 18px;
   font-weight: 600;
   color: #fefefe;
   outline: none;
   margin: 10px auto;
   display: block;
-  font-size: inherit;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-size: 1.2rem;
   font-weight: 800;
   font-style: normal;
 }
@@ -415,7 +460,7 @@ button:not(.close) {
 }
 
 .bottom-info h5 {
-  font-family: "p22-mackinac-pro", serif;
+  font-family: "Verlag", serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2em;
@@ -538,12 +583,25 @@ body form .fw-normal {
   min-height: 217px;
 }
 
+.scribble {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 120px;
+  height: 120px;
+}
+
 footer {
-  background-color: #fefefe;
+  background-color: black;
+}
+
+.footer .text-accent-scribble {
+  width: 100px;
+  fill: black;
+  height: 100px;
 }
 
 .footer-info {
-  background: none repeat scroll 0 0 #242d3a;
   padding: 10px;
 }
 
