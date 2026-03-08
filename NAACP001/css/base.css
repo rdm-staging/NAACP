@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root {
-  --mainColor: #0578FF;
-  --bgColor: #EFEFEF;
+  --mainColor: #002868;
+  --bgColor: #efefef;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
 body,
 input,
@@ -46,13 +46,17 @@ a {
     width: 99%;
     position: fixed;
     background: rgb(2, 0, 36);
-    background: linear-gradient(9deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.75) 100%);
+    background: linear-gradient(
+      9deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
     top: 0;
     left: 0;
     z-index: 2;
   }
 }
-
 
 .content {
   width: 100%;
@@ -151,7 +155,6 @@ form input[type="checkbox"] {
   top: 5px;
 }
 
-
 /* form select {
 	-webkit-appearance: none;
     -moz-appearance: none;
@@ -218,9 +221,7 @@ form input:not(.gift-amount-other):hover {
   z-index: 3;
 }
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .logo-container,
   .form-container {
     left: 55% !important;
@@ -395,7 +396,7 @@ button:not(.close) {
   display: block;
 }
 .submit-container .charity-navigator {
-  max-width: 100px; 
+  max-width: 100px;
   margin: 1em auto 0 auto;
 }
 .bottom-info {
@@ -455,7 +456,8 @@ button:not(.close) {
 }
 
 .bottom-info.show-mobile .icon {
-  filter: invert(60%) sepia(80%) saturate(3590%) hue-rotate(204deg) brightness(102%) contrast(101%);
+  filter: invert(60%) sepia(80%) saturate(3590%) hue-rotate(204deg)
+    brightness(102%) contrast(101%);
 }
 
 .bottom-info .icon {
@@ -474,7 +476,7 @@ button:not(.close) {
   margin: auto;
 }
 
-.bottom-info .row>div {
+.bottom-info .row > div {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -482,7 +484,7 @@ button:not(.close) {
   padding: 0 5px;
 }
 
-.bottom-info.show-mobile .row>div {
+.bottom-info.show-mobile .row > div {
   margin-top: 1em;
 }
 
@@ -578,7 +580,7 @@ footer a:hover {
   font-size: 1em;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .donation-effect-list {
     padding-left: 1em;
   }
@@ -639,7 +641,7 @@ label.error {
   color: #c41e3a;
 }
 
-input[type="checkbox"].error+div {
+input[type="checkbox"].error + div {
   background-color: red;
   padding: 2px;
 }
@@ -652,7 +654,7 @@ input[type="checkbox"].error+div {
     border: 2px solid #c41e3a;
 } */
 
-.error+img+input {
+.error + img + input {
   border: 2px solid #c41e3a;
 }
 
@@ -688,11 +690,9 @@ select.error {
   .hide-mobile {
     display: block;
   }
-
 }
 
 @media screen and (max-width: 767px) {
-
   form header {
     position: relative;
   }
@@ -743,7 +743,7 @@ select.error {
   }
 
   .donation-effect-list {
-    background: url('../images/seal.png') no-repeat right bottom / 50px;
+    background: url("../images/seal.png") no-repeat right bottom / 50px;
   }
 
   body .content {
@@ -831,4 +831,8 @@ select.error {
   font-size: 12px;
   font-weight: 600;
   padding-left: 10px;
+}
+
+.modal-content h3 {
+  color: black;
 }

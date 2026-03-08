@@ -52,18 +52,17 @@ const donationParameters = {
     disableFreeformOnPageLoad: false,
     donationStatements: {
       show: true,
-      statement001: `$20 Monthly Donation Helps Provide: `,
-      statement002: `$23 Monthly Donation Helps Provide:`,
-      statement003: `$25 Monthly Donation Helps Provide: `,
-      statement004: ` Your special gift will help keep our doors open, and give these lost and hurting kids the love and support they need.`,
+      statement001: `$20 Monthly Donation Helps:`,
+      statement002: `$23 Monthly Donation Helps:`,
+      statement003: `$25 Monthly Donation Helps:`,
+      statement004: `Your special gift will help protect voting rights and advance civil rights for all Americans.`,
     },
   },
   processingFees: {
     show: true,
     feePercentage: 0.03,
     prechecked: true,
-    labelText: `I’d like to help cover transaction fees so more of my donation 
-goes to Covenant House. `,
+    labelText: `I'd like to cover the fees associated with my donation so more of my donation goes directly to the NAACP. `,
     totalDonationText: "My new total is:",
   },
   minimumDonation: 20,
@@ -179,11 +178,11 @@ flex-basis: 90%;
           const donationPreCheckCode = value;
           const donationPreCheckValue = this[value].amount;
           const preCheckInput = document.querySelector(
-            `[value="${donationPreCheckCode}"]`
+            `[value="${donationPreCheckCode}"]`,
           );
           preCheckInput.checked = true;
           const preCheckLabel = document.querySelector(
-            `[for="${preCheckInput.id}"]`
+            `[for="${preCheckInput.id}"]`,
           );
           preCheckLabel.classList.add("donation-selected");
           donationChoiceHandler(donationPreCheckCode, donationPreCheckValue);
@@ -285,7 +284,7 @@ flex-basis: 90%;
   displayDonationStatements: function (code) {
     const showStatements = this.pageTemplate.donationStatements.show;
     const statementAppendReference = document.querySelector(
-      ".accept-fees-container"
+      ".accept-fees-container",
     );
     let statement;
     if (showStatements) {
@@ -471,7 +470,7 @@ function calcTotalDonation(feesAccepted) {
       //match user input from 'other' field against our regex pattern (no special chars, letters, or more than 2 decimals)
       if (
         !!donationAmt.match(
-          /(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$/
+          /(?=.*?\d)^\$?(([1-9]\d{0,2}(,\d{3})*)|\d+)?(\.\d{1,2})?$/,
         )
       ) {
         //validate user input against $500 max and $19 min
@@ -495,7 +494,7 @@ function calcTotalDonation(feesAccepted) {
           //calculate fees if feesAccepted == 1
           else if (feesAccepted == 1) {
             const processingFee = currency(donationAmt).multiply(
-              donationParameters.processingFees.feePercentage
+              donationParameters.processingFees.feePercentage,
             );
             //multiply procFee by donationAmt to get total
             totalDonation = currency(donationAmt).add(processingFee).value;
