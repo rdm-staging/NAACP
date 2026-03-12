@@ -1,12 +1,92 @@
 @charset "UTF-8";
 
 /* =====================
+   Fonts
+   ===================== */
+
+/* Verlag Book */
+@font-face {
+  font-family: "Verlag A";
+  src: url("../fonts/Verlag-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Verlag Light */
+@font-face {
+  font-family: "Verlag B";
+  src: url("../fonts/Verlag-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gothic CG No3 Regular */
+@font-face {
+  font-family: "GothicCGNo3";
+  src: url("../fonts/Gothic%20CG%20No3%20Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Flood */
+@font-face {
+  font-family: "Flood";
+  src: url("../fonts/Flood.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mainColor: #002868;
+  --bgColor: #efefef;
+  --secondaryColor: #ffcd00;
+  --tertiaryColor: #4b0fe8;
+  --mainFont: "Verlag A", serif;
+  --headingFont: "GothicCGNo3", sans-serif;
+  --mainFontLight: "Verlag B", serif;
+  --emphasisFont: "Flood", serif;
+}
+
+/* =====================
+   Typography
+   ===================== */
+
+body,
+input,
+select {
+  font-family: var(--mainFont);
+  font-size: 14px;
+}
+
+h1,
+h2 {
+  font-family: var(--headingFont);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+em,
+i {
+  font-family: var(--emphasisFont);
+  font-style: normal;
+}
+
+.emphasis {
+  font-family: var(--emphasisFont);
+  font-style: normal;
+}
+
+/* =====================
    Base / Shared
    ===================== */
 
 body {
   background-color: #f2f0f0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--mainFont);
   padding-top: 72px;
 }
 
@@ -48,10 +128,6 @@ header {
   padding: 2% 0;
 }
 
-.logo {
-  background: #fff;
-}
-
 .logo img {
   max-width: 250px;
   width: 100%;
@@ -72,6 +148,7 @@ header {
 
 footer {
   margin-top: 3%;
+  padding: 3%;
 }
 
 footer p {
@@ -91,7 +168,6 @@ footer a {
 
 h2 {
   font-weight: bold;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 0.03em;
@@ -107,7 +183,6 @@ h2 {
 
 .subhead h3 {
   font-weight: bold;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.02em;
@@ -223,15 +298,18 @@ body #mainContent .site-btn img {
 
 @media only screen and (max-width: 767px) {
   .subhead h2 {
-    font-weight: bold;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.2em;
+    text-align: center;
+  }
+
+  .subhead h2 .emphasis {
+    font-size: 24px;
+    display: block;
   }
 
   .subhead h3 {
     font-weight: bold;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 24px;
     padding-left: 1px;
@@ -289,5 +367,5 @@ body #mainContent .site-btn img {
    ===================== */
 
 .soft-declines #mainContent .row {
-  min-height: 570px;
+  min-height: 40px;
 }

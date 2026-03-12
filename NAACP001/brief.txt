@@ -1,55 +1,72 @@
 CREATIVE BRIEF
 
-Client:		NAACP Project:		Landing Page Creative + companion pagesBrief Date:	02.19.26
+
+Client:		NAACP 
+Project:		Landing Page Creative + companion pages
+Brief Date:	02.19.26 – Updated 3.9.26
 Designer:		Matt Vitello
 Project Link:	NAACP Creative Project
 
+
 PROJECT DESCRIPTION AND OBJECTIVE: 
 Recurring Donor Media will acquire monthly sustaining donations on behalf of NAACP (National Association for the Advancement of Colored People), driving online affiliate traffic to RDM’s TruHost NAACP branded landing page. 
+
 
 CREATIVE
 This is a new client for RDM – RDM does not have any creative for this client yet. 
 NAACP’s Website: https://naacp.org/
 
+
 Creative Assets
-	•	All Assets can be found: 
-	•	https://drive.google.com/drive/folders/1njkbre7Svopp57baRE7BlQ4nRbzB0EJX?usp=sharing
-	•	Brand guidelines
-	•	Images (to come)
-	•	Logos
-	•	Link to NAACP Monthly donation page for reference can be found HERE. 
+All Assets can be found: 
+https://drive.google.com/drive/folders/1njkbre7Svopp57baRE7BlQ4nRbzB0EJX?usp=sharing
+Brand guidelines
+Images 
+Logos
+Link to NAACP Monthly donation page for reference can be found:
+Version 1
+Version 2 
+
+
 
 OFFER:  
-	•	Offer #1 Donation Amounts 
-	•	$20
-	•	$23
-	•	$25 
-	•	“Other” (Other is not to be below the lowest donation amount of $20)
-	•	+processing fees of TBD%
+Offer #1 Donation Amounts 
+$20
+$23
+$25 
+“Other” (Other is not to be below the lowest donation amount of $20)
++processing fees of 4%
+
 
 Company Mission: 
 NAACP’s mission is to ensure the political, educational, social, and economic equality of rights for all persons and to eliminate racial hatred and discrimination.
+
 
 Detail:
 Who They Are
 The NAACP, or National Association for the Advancement of Colored People, is the oldest and largest civil rights organization in the United States, founded in 1909 to advocate for racial equality and justice.
 
+
 NAACP is the largest and most influential civil rights organization in the nation. The vital work we do advancing political, educational, social, and economic equality for Black people in the United States depends on the generosity of supporters.
+
 
 Founding and Purpose
 The NAACP was established on February 12, 1909, in New York City, in response to the rampant violence against African Americans, particularly following the Springfield Race Riot of 1908. The organization was formed by a diverse group of activists, including notable figures such as W.E.B. Du Bois, Ida B. Wells, and Mary White Ovington. 
 
-	•	DELIVERABLES FOR REFERENCE (USING CHI): 
-	•	Landing page  https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/
-	•	Confirm https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/confirmation.php
-	•	Dummy decline https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/confirmation_dummy.php
+
+DELIVERABLES FOR REFERENCE (USING CHI): 
+Landing page  https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/
+Note: No equivalencies.
+Confirm https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/confirmation.php
+Dummy decline https://www.order-safely.com/covenanthouse/chi_ch007_0225_2000ea/confirmation_dummy.php
+
 
 Misc. Information 
-	•	See Mini Brand Guidelines on drive. 
+See Mini Brand Guidelines on drive. 
 Copy:
 
-	•	DMS is hosting via TruHost
-	•	Unique URL: givemonthly.NAACP.org (this is being finalized)
+DMS is hosting via TruHost
+Unique URL: givemonthly.NAACP.org (this is being finalized)
 LANDING PAGE
 Imagery: Image for page can be found in the creative drive under images. 
 The size and formatting is not conducive to our landing page format. You can please the image over a larger background and blur it out or any other thoughts you have. Like the NAACP used here (without the copy on the image)
@@ -65,21 +82,20 @@ It only takes a minute to stand with us.
 
 Your gift helps:
 
-	•	Support legal action against discrimination
-	•	Fund local civil rights programs
-	•	Strengthen community advocacy
+Support legal action against discrimination
+Fund local civil rights programs
+Strengthen community advocacy
 Justice doesn’t move forward on its own. It moves when people step up.
 Today, that person is you.
 
 It’s fast. It’s secure. And it makes a real difference.
-(note Jodi – add in equiv)
 
 Terms & Conditions: 
-Thank you for making a donation today to the NAACP. Each month, your credit card will be charged the same donation amount you have selected today, unless otherwise notified. You may cancel at any time by contacting our team at xxx-xxx-xxxx. You can also email us at xxx@naacp.org with any questions you may have. The NAACP depends on gifts from donors like you. Thank you again, we appreciate your support!
+Thank you for making a donation today to the NAACP. Each month, your credit card will be charged the same donation amount you have selected today, unless otherwise notified. You may cancel at any time by contacting our team at 410-580-5129. You can also email us at Development@naacpnet.org with any questions you may have. The NAACP depends on gifts from donors like you. Thank you again, we appreciate your support!
 
-Processing Fees – Yes Include option to Cover the Processing Fees (TBD%)
-	•	I’d like to cover the fees associated with my donation so more of my donation goes directly to the NAACP.
-	•	I am over 18 and I have read, understand and agree to the terms of the offer above.
+Processing Fees – Yes Include option to Cover the Processing Fees (4%)
+I’d like to cover the fees associated with my donation so more of my donation goes directly to the NAACP.
+I am over 18 and I have read, understand and agree to the terms of the offer above.
 The NAACP respects your privacy. By making your gift, you are accepting the terms of our Privacy Policy. 
 
 Automatic Opt In – smaller font prior to CTA
@@ -96,27 +112,23 @@ NAACP is a tax-exempt 501(C)(3) nonprofit organization. Your gift is tax-deducti
 CONFIRMATION/THANK YOU PAGE
 
 Pickup CHI page noted above. 
+Image: Use little girl image in the drive. 
 
 Copy:
-You’re Now a Monthly Supporter
-
 Dear ,
 
-Thank you for setting up your monthly gift to the NAACP in the amount of $0.00*.
+You’re Now a Monthly Supporter
 
-Your support will continue each month — providing steady funding to protect voting rights, challenge discrimination, and defend equal opportunity.
+Thank you for setting up your monthly gift of $0.00* to the NAACP. By giving monthly, you’re now part of NAACP Champion for Change — a community of sustainers powering civil rights progress year‑round.
 
 Why Monthly Giving Matters
 Civil rights work doesn’t happen overnight.
 It takes consistent action — month after month.
-
 Your ongoing support helps make sure this work never pauses.
 
 What Happens Next
-
 Your monthly gift will be processed automatically.
 You’ll receive updates on the impact you’re helping make.
-
 Thank you for standing up — not just once, but consistently.
 
 Your Receipt
@@ -126,7 +138,7 @@ Your Donation Confirmation
 Amount: $0.00*
 Frequency: Monthly
 Duration: Ongoing
-Designations: The NAACP
+Designations: NAACP
 Additional Amount: $0.00*
 Include Additional Amount I choose to help cover costs and processing fees to make my donation go further.
 
