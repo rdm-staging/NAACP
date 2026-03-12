@@ -155,41 +155,47 @@
     <!-- START CONTAINER DIV -->
     <div id="container">
       <div class="content m-auto">
-        <div class="logo-container">
-          <img
-            class="logo desktop-logo"
-            src="images/logo.png"
-            alt="NAACP Logo"
-          />
-          <img
-            class="logo mobile-logo"
-            src="images/logo.png"
-            alt="NAACP Logo"
-          />
-        </div>
+        <div class="page-bg hide-mobile"></div>
+        <nav class="site-nav">
+          <img class="logo" src="images/logo.png" alt="NAACP Logo" />
+          <a href="#step-1" class="nav-donate-btn">Donate Now</a>
+        </nav>
 
         <div class="form-container">
           <!--ORDER FORM-->
 
           <form name="frmMain" id="frmMain" action="" method="post">
             <header>
-              <h1 class="mb-4">GIVE MONTHLY TO <span>KEEP ADVANCING</span></h1>
+              <h1 class="mb-4 hide-mobile">
+                GIVE MONTHLY TO <span>KEEP ADVANCING</span>
+              </h1>
 
-              <div class="mobile-hero show-mobile"></div>
+              <div class="mobile-hero-container">
+                <svg
+                  class="mobile-hero-scribble"
+                  viewBox="0 0 483.45 32.11"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="#frame-texture-path"></use>
+                </svg>
+                <div class="mobile-hero show-mobile"></div>
+              </div>
               <p>
                 Your monthly donation can create real change. Your gift helps
                 the NAACP fight for equal rights and fair treatment. It only
                 takes a minute to stand with us.
               </p>
-              <ul class="text-left">
-                <li>Support legal action against discrimination</li>
-                <li>Fund local civil rights programs</li>
-                <li>Strengthen community advocacy</li>
-              </ul>
-              <p>
-                Justice doesn't move forward on its own. It moves when people
-                step up. Today, that person is you.
-              </p>
+              <div class="hide-mobile">
+                <ul class="text-left">
+                  <li>Support legal action against discrimination</li>
+                  <li>Fund local civil rights programs</li>
+                  <li>Strengthen community advocacy</li>
+                </ul>
+                <p>
+                  Justice doesn't move forward on its own. It moves when people
+                  step up. Today, that person is&nbsp;you.
+                </p>
+              </div>
             </header>
 
             <div class="form-inner" id="step-1">
@@ -204,7 +210,7 @@
               </div>
               <!-- end #donationAmount -->
 
-              <div class="bottom-info mx-auto show-mobile">
+              <div class="bottom-info mx-auto">
                 <div class="flair">
                   <svg
                     class="bg-scribble"
@@ -662,16 +668,6 @@
                 >
                   DONATE MONTHLY
                 </button>
-
-                <img src="images/trust-marks.png" />
-                <a
-                  href="https://www.charitynavigator.org/ein/132725416"
-                  target="_blank"
-                  ><img
-                    src="images/charity-navigator.png"
-                    class="charity-navigator"
-                    alt="charity navigator logo"
-                /></a>
               </div>
 
               <!--END SUBMIT BUTTON-->
@@ -728,36 +724,6 @@
               </p>
             </div>
           </footer>
-          <!--bottom info-->
-          <div class="bottom-info mx-auto hide-mobile">
-            <h6 class="w-100">THE NAACP AT A GLANCE:</h6>
-            <div class="row px-0">
-              <div class="col-md-3">
-                <div class="icon">
-                  <img src="images/house.svg" />
-                </div>
-                <h5>2,200+</h5>
-                <p>State &amp; Local Units Nationwide</p>
-              </div>
-              <div class="col-md-3">
-                <div class="icon">
-                  <img src="images/heart.svg" />
-                </div>
-                <h5>117 Years</h5>
-                <p>Fighting for Civil Rights</p>
-              </div>
-              <div class="col-md-3">
-                <div class="icon">
-                  <img src="images/dove.svg" />
-                </div>
-                <h5>All 50</h5>
-                <p>States Plus Washington, D.C.</p>
-              </div>
-              <div class="col-md-3 seal">
-                <img src="images/seal.png" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
