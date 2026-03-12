@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Order Confirmation</title>
+    <title>Donation Confirmation | NAACP</title>
 
     <!-- Included CSS Files -->
     <link
@@ -63,218 +63,7 @@
       </style><!
     [endif]-->
 
-    <style>
-      body {
-        background-color: #f2f0f0;
-
-        font-family: "Roboto", sans-serif;
-      }
-
-      header {
-        min-height: 1px;
-      }
-
-      .main-row {
-        padding: 0.9375em;
-      }
-
-      .centered {
-        margin: auto;
-        display: block;
-      }
-
-      h2 {
-        color: #02619e;
-      }
-
-      .logo {
-        background: #fff;
-      }
-
-      .logo img {
-        max-width: 250px;
-        width: 100%;
-      }
-
-      .thank-you-image {
-        max-width: 100%;
-        padding-top: 10px;
-      }
-
-      #top {
-        background-color: #ffffff;
-        margin-top: 0;
-      }
-
-      #top .row {
-        background-color: #ffffff;
-        height: auto;
-      }
-
-      #mainContent .row {
-        background-color: #ffffff;
-      }
-
-      .subhead p {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        margin-bottom: 0.9375em;
-      }
-
-      .logo img.hide-on-print {
-        margin: 0;
-        padding: 0;
-      }
-
-      .purchInfo p.purchLabel {
-        color: #02619e;
-        line-height: 20px;
-      }
-
-      table tbody tr:nth-child(2n) {
-        background: none repeat scroll 0 0 #ededed;
-      }
-
-      table thead tr {
-        background: none repeat scroll 0 0 #ededed;
-      }
-
-      footer p {
-        max-width: 450px;
-        width: 90%;
-        color: #707070;
-      }
-
-      footer a {
-        color: #707070;
-        text-decoration: underline;
-      }
-
-      .subhead h3 {
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 22px;
-        letter-spacing: 0.02em;
-        padding-left: 3px;
-      }
-
-      .yellow {
-        color: #ffffff;
-      }
-
-      #ads {
-        padding: 3%;
-      }
-
-      #top {
-        margin-top: 4%;
-      }
-
-      .mobile-image1 {
-        width: 40%;
-        float: left;
-        padding-left: 5%;
-        padding-top: 2%;
-      }
-
-      .mobile-image2 {
-        width: 40%;
-        float: right;
-        padding-top: 2%;
-        padding-right: 5%;
-      }
-
-      body #mainContent .site-btn {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 70%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-      }
-
-      body #mainContent .site-btn img {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-
-      #mainContent .site-btn p {
-        font-size: 16px;
-      }
-
-      @media print {
-        header {
-          border-bottom: none;
-          -moz-box-shadow: none;
-          -webkit-box-shadow: none;
-          box-shadow: none;
-        }
-
-        header .logo img {
-          margin-bottom: 30px;
-          width: 300px;
-          height: 58px;
-          margin-top: 30px;
-        }
-
-        .purchInfo p.purchLabel {
-          font-size: 12px;
-          font-size: 1.2rem;
-        }
-      }
-
-      @media only screen and (max-width: 767px) {
-        .subhead h2 {
-          font-weight: bold;
-          font-family: "Open Sans", Arial, Helvetica, sans-serif;
-          font-size: 24px;
-          line-height: 1.2em;
-        }
-
-        .subhead h3 {
-          font-weight: bold;
-          font-family: "Open Sans", Arial, Helvetica, sans-serif;
-          font-size: 18px;
-          line-height: 24px;
-          padding-left: 1px;
-        }
-        footer p {
-          width: 100%;
-        }
-
-        header {
-          width: 100%;
-          margin: 0;
-          padding: 0;
-          height: 94px;
-        }
-
-        header .container {
-          text-align: left;
-          padding: 0;
-          margin: 0;
-        }
-      }
-
-      .logo img {
-        width: 300px !important;
-      }
-
-      @media screen and (max-width: 400px) {
-        .mobile-image1 {
-          width: 100%;
-          float: none !important;
-          padding: 1% !important;
-          margin-top: 3%;
-        }
-
-        .mobile-image2 {
-          display: none;
-          float: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/confirm.css" />
 
     <!-- Google Tag Manager -->
     <script>
@@ -292,7 +81,7 @@
     <!-- End Google Tag Manager -->
   </head>
 
-  <body>
+  <body class="confirmation">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -304,11 +93,9 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header>
-      <div class="p-2 logo bg-white off">
-        <img src="images/ch-logo.png" alt="Covenant House Logo" />
-      </div>
-    </header>
+    <nav class="site-nav">
+      <img class="logo" src="images/logo.png" alt="NAACP Logo" />
+    </nav>
 
     <div id="mainContent">
       <div class="container">
@@ -316,50 +103,51 @@
           <img
             class="thank-you-image centered"
             src="images/thank-you-image.jpg"
-            alt="Smiling Teen's in a Covenant House shelter"
+            alt="NAACP supporters advocating for civil rights"
           />
 
           <!-- Main Middle -->
           <div class="eight columns">
             <div class="row thankyou">
               <div class="twelve columns subhead" style="padding-top: 5%">
-                <h2>Thank you for your monthly donation!</h2>
+                <h2>
+                  You're Now a <span class="emphasis">Monthly Supporter</span>
+                </h2>
 
                 <p>Dear ,<br /></p>
-                <p>Thank you for your generous monthly gift of $0.00.</p>
                 <p>
-                  Every child deserves a safe place to sleep and hope for a
-                  brighter future. Your monthly donation helps provide housing
-                  and supportive services for youth facing homelessness.
+                  Thank you for setting up your monthly gift of $0.00* to the
+                  NAACP. By giving monthly, you're now part of NAACP Champion
+                  for Change &mdash; a community of sustainers powering civil
+                  rights progress year-round.
                 </p>
                 <p>
-                  Thanks to your generosity, over 2,000 young people will sleep
-                  safely under a Covenant House roof tonight. In over 34 cities
-                  across five countries, Covenant House will make sure they have
-                  food, clothing and medical care. They will be shown respect
-                  and unconditional love. Thanks to you they will wake up in a
-                  warm beds and not the streets. This will be the first step in
-                  helping them rebuild their lives.
-                </p>
-                <p>
-                  We know that sometimes it’s hard to decide which cause or
-                  organization to support with your dollars, especially when
-                  everyone seems deserving, and there’s only so much to go
-                  around. It means so much to all of us that you chose to
-                  contribute to Covenant House at this time.
+                  Your support will continue each month &mdash; providing steady
+                  funding to protect voting rights, challenge discrimination,
+                  and defend equal opportunity.
                 </p>
 
-                <p>Thank you for your generosity!</p>
-
+                <h3>Why Monthly Giving Matters</h3>
                 <p>
-                  <b
-                    >Please print out and save this donation confirmation for
-                    your records.</b
-                  >
+                  Civil rights work doesn't happen overnight. It takes
+                  consistent action &mdash; month after month. Your ongoing
+                  support helps make sure this work never pauses.
+                </p>
+
+                <h3>What Happens Next</h3>
+                <p>
+                  Your monthly gift will be processed automatically. You'll
+                  receive updates on the impact you're helping make.
                 </p>
                 <p>
-                  Contact us if you have questions about your contribution at
-                  1-833-327-0572.
+                  Thank you for standing up &mdash; not just once, but
+                  consistently.
+                </p>
+
+                <p>
+                  <b>Your Receipt</b><br />
+                  Your gift will be charged to your account each month. Save
+                  this page for your records.
                 </p>
               </div>
             </div>
@@ -402,14 +190,14 @@
                   <thead>
                     <tr>
                       <th>Qty</th>
-                      <th>Monthly Gift to Covenant House</th>
+                      <th>Monthly Gift to the NAACP</th>
                       <th>Amount</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Monthly Donation to Covenant House</td>
+                      <td>Monthly Donation to the NAACP</td>
                       <td>$0.00</td>
                     </tr>
 
@@ -434,19 +222,18 @@
     <!--FOOTER-->
     <footer class="text-center">
       <p class="centered">
-        Covenant House is a nonprofit 501(c)(3) organization;<br />
-        (EIN/Tax ID number: 13-2725416 DUNS number: 07-520-9411).<br />
-        461 Eighth Avenue, New York, NY 10001 | 833-327-0572 | Email us
-        onlinedonation@covenanthouse.org<br />
-        Copyright
+        &copy;
         <script type="text/javascript">
           var d = new Date();
-          var year = d.getFullYear();
           document.write(d.getFullYear());
         </script>
-        . All rights reserved.
+        NAACP. All rights reserved.<br />
+        NAACP is a tax-exempt 501(C)(3) nonprofit organization. Your gift is
+        tax-deductible as allowed by law.<br />
+        The NAACP respects your privacy. By making your gift, you are accepting
+        the terms of our Privacy Policy.
       </p>
-      <a href="https://www.covenanthouse.org/privacy-policy" target="_blank"
+      <a href="https://naacp.org/resources/privacy-policy" target="_blank"
         >Privacy Policy</a
       >
     </footer>

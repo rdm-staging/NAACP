@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+/* =====================
+   Fonts
+   ===================== */
+
+/* Verlag Book */
+@font-face {
+  font-family: "Verlag A";
+  src: url("../fonts/Verlag-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Verlag Light */
+@font-face {
+  font-family: "Verlag B";
+  src: url("../fonts/Verlag-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gothic CG No3 Regular */
+@font-face {
+  font-family: "GothicCGNo3";
+  src: url("../fonts/Gothic%20CG%20No3%20Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Flood */
+@font-face {
+  font-family: "Flood";
+  src: url("../fonts/Flood.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mainColor: #002868;
+  --bgColor: #efefef;
+  --secondaryColor: #ffcd00;
+  --tertiaryColor: #4b0fe8;
+  --mainFont: "Verlag A", serif;
+  --headingFont: "GothicCGNo3", sans-serif;
+  --mainFontLight: "Verlag B", serif;
+  --emphasisFont: "Flood", serif;
+}
+
+/* =====================
+   Typography
+   ===================== */
+
+body,
+input,
+select {
+  font-family: var(--mainFont);
+  font-size: 14px;
+}
+
+h1,
+h2 {
+  font-family: var(--headingFont);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+em,
+i {
+  font-family: var(--emphasisFont);
+  font-style: normal;
+}
+
+.emphasis {
+  font-family: var(--emphasisFont);
+  font-style: normal;
+}
+
+/* =====================
+   Base / Shared
+   ===================== */
+
+body {
+  background-color: #f2f0f0;
+  font-family: var(--mainFont);
+  padding-top: 72px;
+}
+
+header {
+  min-height: 1px;
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.site-nav .logo {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.main-row {
+  padding: 0.9375em;
+}
+
+.centered {
+  margin: auto;
+  display: block;
+}
+
+.p-2 {
+  padding: 2% 0;
+}
+
+.logo img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.logo img {
+  width: 300px !important;
+}
+
+.logo img.hide-on-print {
+  margin: 0;
+  padding: 0;
+}
+
+.yellow {
+  color: #ffffff;
+}
+
+footer {
+  margin-top: 3%;
+  padding: 3%;
+}
+
+footer p {
+  max-width: 450px;
+  width: 90%;
+  color: #707070;
+}
+
+footer a {
+  color: #707070;
+  text-decoration: underline;
+}
+
+/* =====================
+   Typography
+   ===================== */
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #002868;
+  margin-top: 3%;
+}
+
+.subhead p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.9375em;
+}
+
+.subhead h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  padding-left: 3px;
+}
+
+p.lead {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* =====================
+   Confirmation Page
+   ===================== */
+
+.thank-you-image {
+  max-width: 100%;
+  padding-top: 10px;
+}
+
+#top {
+  background-color: #ffffff;
+  margin-top: 4%;
+}
+
+#top .row {
+  background-color: #ffffff;
+  height: auto;
+}
+
+#mainContent .row {
+  background-color: #ffffff;
+}
+
+.purchInfo p.purchLabel {
+  color: #002868;
+  line-height: 20px;
+}
+
+table tbody tr:nth-child(2n) {
+  background: none repeat scroll 0 0 #ededed;
+}
+
+table thead tr {
+  background: none repeat scroll 0 0 #ededed;
+}
+
+#ads {
+  padding: 3%;
+}
+
+.mobile-image1 {
+  width: 40%;
+  float: left;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.mobile-image2 {
+  width: 40%;
+  float: right;
+  padding-top: 2%;
+  padding-right: 5%;
+}
+
+body #mainContent .site-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 70%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+body #mainContent .site-btn img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#mainContent .site-btn p {
+  font-size: 16px;
+}
+
+/* =====================
+   Print
+   ===================== */
+
+@media print {
+  header {
+    border-bottom: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  header .logo img {
+    margin-bottom: 30px;
+    width: 300px;
+    height: 58px;
+    margin-top: 30px;
+  }
+
+  .purchInfo p.purchLabel {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+/* =====================
+   Responsive
+   ===================== */
+
+@media only screen and (max-width: 767px) {
+  .subhead h2 {
+    font-size: 18px;
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  .subhead h2 .emphasis {
+    font-size: 24px;
+    display: block;
+  }
+
+  .subhead h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 1px;
+  }
+
+  footer p {
+    width: 100%;
+  }
+
+  footer {
+    position: relative;
+  }
+
+  header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  header .container {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 654px) {
+  .leftside {
+    float: left !important;
+  }
+
+  .rightside {
+    float: left !important;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-image1 {
+    width: 100%;
+    float: none !important;
+    padding: 1% !important;
+    margin-top: 3%;
+  }
+
+  .mobile-image2 {
+    display: none;
+    float: none;
+  }
+}
+
+/* =====================
+   Soft Declines Page
+   ===================== */
+
+.soft-declines #mainContent .row {
+  min-height: 40px;
+}

@@ -1,21 +1,76 @@
 @charset "UTF-8";
 
-:root {
-  --mainColor: #0578FF;
-  --bgColor: #EFEFEF;
+/* Verlag Book */
+@font-face {
+  font-family: "Verlag A";
+  src: url("../fonts/Verlag-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+/* Verlag Light */
+@font-face {
+  font-family: "Verlag B";
+  src: url("../fonts/Verlag-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gothic CG No3 Regular */
+@font-face {
+  font-family: "GothicCGNo3";
+  src: url("../fonts/Gothic%20CG%20No3%20Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Flood */
+@font-face {
+  font-family: "Flood";
+  src: url("../fonts/Flood.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mainColor: #002868;
+  --bgColor: #efefef;
+  --secondaryColor: #ffcd00;
+  --tertiaryColor: #4b0fe8;
+  --mainFont: "Verlag A", serif;
+  --headingFont: "GothicCGNo3", sans-serif;
+  --mainFontLight: "Verlag B", serif;
+  --emphasisFont: "Flood", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body,
 input,
 select {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--mainFont);
   font-size: 14px;
 }
 
 img {
   width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headingFont);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -39,25 +94,78 @@ a {
   display: none;
 }
 
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.site-nav .logo {
+  width: auto;
+  height: 48px;
+  margin: 0;
+}
+
+.nav-donate-btn {
+  background: var(--secondaryColor);
+  color: #000;
+  font-family: var(--headingFont);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-donate-btn:hover,
+.nav-donate-btn:focus {
+  background: #e6b800;
+  color: #000;
+  text-decoration: none;
+}
+
+#step-1 {
+  scroll-margin-top: 80px;
+}
+
 @media screen and (min-width: 992px) {
   .content::before {
     content: "";
     height: 100vh;
-    width: 99%;
+    width: 100%;
     position: fixed;
     background: rgb(2, 0, 36);
-    background: linear-gradient(9deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.75) 100%);
+    background: linear-gradient(
+      9deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
     top: 0;
     left: 0;
     z-index: 2;
   }
 }
 
-
-.content {
+/*.content {
   width: 100%;
   position: absolute;
-  background: url("../images/bg.jpg") no-repeat 100% center / 150%;
+  background: none;
   top: 0;
   left: 0;
   right: 0;
@@ -69,30 +177,55 @@ a {
   justify-content: center;
   min-width: 300px;
   overflow-y: auto;
+}*/
+.content {
+  height: 100vh;
+  width: 100%;
+}
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background: url("../images/bg-2.webp") no-repeat center center / cover;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
 }
 
 form header {
   text-align: center;
   padding: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form header h1 {
-  max-width: 400px;
   width: 100%;
   margin: auto;
-  font-family: "p22-mackinac-pro", serif;
-  font-weight: 700;
   font-style: normal;
   color: var(--mainColor);
+}
+
+form header .text-container {
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
 }
 
 form header h1 span {
   display: block;
   font-size: 1.35em;
+  font-family: var(--emphasisFont);
 }
 
-form header p {
+form header p,
+form header li {
   font-size: 16px;
   line-height: 22px;
 }
@@ -118,8 +251,7 @@ form select {
 .step-3 input,
 .step-3 select {
   font-size: 16px !important;
-  font-family: "Source Sans Pro", "Open Sans", Monsterrat, "Courier New",
-    sans-serif;
+  font-family: var(--mainFont);
   color: rgb(64, 64, 64);
   height: 40px;
   width: 100%;
@@ -150,7 +282,6 @@ form input[type="checkbox"] {
   position: relative;
   top: 5px;
 }
-
 
 /* form select {
 	-webkit-appearance: none;
@@ -189,10 +320,10 @@ form input:not(.gift-amount-other):hover {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid #1e1e23;
+  border: 1px solid var(--secondaryColor);
   border-radius: 50%;
-  background-color: #1e1e23;
-  color: #efefef;
+  background-color: var(--secondaryColor);
+  color: black;
   font-size: 28px;
   font-weight: 600;
   line-height: 50px;
@@ -202,7 +333,6 @@ form input:not(.gift-amount-other):hover {
   height: 10px;
 }
 
-.logo-container,
 .form-container {
   position: absolute;
   right: 0;
@@ -218,10 +348,7 @@ form input:not(.gift-amount-other):hover {
   z-index: 3;
 }
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-
-  .logo-container,
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .form-container {
     left: 55% !important;
   }
@@ -262,6 +389,7 @@ body .donation-choice {
   border: 1px solid #c7c7c7;
   border-radius: 6px;
   background-color: #f8f8f8;
+  font-family: var(--mainFont);
   font-weight: 600;
   color: #000;
 }
@@ -335,19 +463,18 @@ body .donation-selected,
 
 .form-button,
 button:not(.close) {
-  height: 45px;
-  width: 175px;
-  border: 1px solid #e03e52;
+  height: 55px;
+  min-width: 300px;
+  border: 1px solid var(--mainColor);
   border-radius: 6px;
-  background-color: #e03e52;
+  background-color: var(--mainColor);
   line-height: 18px;
   font-weight: 600;
   color: #fefefe;
   outline: none;
   margin: 10px auto;
   display: block;
-  font-size: inherit;
-  font-family: "ibm-plex-mono", sans-serif;
+  font-size: 1.2rem;
   font-weight: 800;
   font-style: normal;
 }
@@ -386,17 +513,50 @@ button:not(.close) {
 }
 
 .submit-container {
-  text-align: right;
+  padding: 2em 0;
+  background: var(--mainColor);
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
 }
 
-.submit-container img {
-  max-width: 250px;
-  margin: auto;
-  display: block;
+.submit-container .bottom-info-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5em;
 }
-.submit-container .charity-navigator {
-  max-width: 100px; 
-  margin: 1em auto 0 auto;
+
+.submit-container .flair {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  height: 600px;
+  left: 0px;
+  top: -70px;
+}
+
+.submit-container .bg-scribble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1000px;
+  transform: scale(2.5);
+  fill: #001a4d;
+}
+
+.submit-container button {
+  background-color: var(--secondaryColor);
+  color: black;
+  font-family: var(--headingFont);
+}
+
+.submit-container ul li,
+.submit-container p {
+  color: #fff;
 }
 .bottom-info {
   bottom: 0;
@@ -408,13 +568,13 @@ button:not(.close) {
   padding-top: 2em;
 }
 
-.bottom-info.show-mobile .row {
+.bottom-info .row {
   flex-wrap: wrap;
   padding-top: 2em;
 }
 
 .bottom-info h5 {
-  font-family: "p22-mackinac-pro", serif;
+  font-family: "Verlag", serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2em;
@@ -428,34 +588,62 @@ button:not(.close) {
   margin: 0;
 }
 
-.bottom-info.show-mobile h6,
-.bottom-info.show-mobile h5,
-.bottom-info.show-mobile p {
-  color: var(--mainColor);
+.bottom-info h5 {
+  color: var(--secondaryColor);
+  font-family: var(--emphasisFont);
+  font-size: 2.15rem;
+}
+
+.bottom-info h6,
+.bottom-info p {
+  color: white;
   text-align: center;
   margin: 0;
 }
 
 .bottom-info h6 {
   flex-basis: 100%;
+  color: #fff;
 }
 
-.bottom-info.show-mobile h6 {
-  color: #757576;
+.bottom-info h6 {
   line-height: 1.2em;
 }
 
-.bottom-info.show-mobile {
-  background: var(--bgColor);
+.bottom-info {
+  background: var(--tertiaryColor);
 }
-
-.submit-container {
-  padding: 2em 0;
-  background-color: var(--bgColor);
+.bottom-info {
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
 }
-
-.bottom-info.show-mobile .icon {
-  filter: invert(60%) sepia(80%) saturate(3590%) hue-rotate(204deg) brightness(102%) contrast(101%);
+.bottom-info .bottom-info-content {
+  position: relative;
+  z-index: 1;
+}
+.bottom-info .flair {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  height: 600px;
+  left: 0px;
+  top: -70px;
+}
+.bottom-info .bg-scribble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1000px;
+  transform: scale(2.5);
+  fill: #1600d3;
+}
+.bottom-info .icon {
+  display: none;
 }
 
 .bottom-info .icon {
@@ -474,7 +662,7 @@ button:not(.close) {
   margin: auto;
 }
 
-.bottom-info .row>div {
+.bottom-info .row > div {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -482,7 +670,7 @@ button:not(.close) {
   padding: 0 5px;
 }
 
-.bottom-info.show-mobile .row>div {
+.bottom-info.show-mobile .row > div {
   margin-top: 1em;
 }
 
@@ -517,6 +705,12 @@ body form .fw-normal {
   color: #fff;
 }
 
+@media screen and (min-width: 48em) {
+  div.step-2 {
+    margin-top: 5em;
+  }
+}
+
 .step-2,
 .step-3 {
   position: relative;
@@ -531,21 +725,52 @@ body form .fw-normal {
 
 .mobile-hero {
   width: 100%;
-  background: url("../images/bg-mobile.jpg") no-repeat center center / cover;
-  min-width: 100%;
-  min-height: 217px;
+  background: url("../images/bg-mobile.jpg") no-repeat center 90% / 105%;
+  width: 90%;
+  margin: auto;
+  min-height: 270px;
+}
+
+.mobile-hero-container {
+  background: url("../images/purple-together.webp") no-repeat center top / 550px;
+  width: 100%;
+  height: 100%;
+  padding: 4% 0 0;
+}
+
+.mobile-hero-scribble {
+  width: 55%;
+  fill: white;
+  position: absolute;
+  margin-top: -15px;
+  left: 0;
+}
+
+.scribble {
+  position: absolute;
 }
 
 footer {
-  background-color: #fefefe;
+  background-color: black;
+  position: relative;
+}
+
+footer .scribble {
+  width: 50%;
+  fill: black;
+  height: 50%;
+  top: -12px;
+  z-index: 1;
 }
 
 .footer-info {
-  background: none repeat scroll 0 0 #242d3a;
   padding: 10px;
+  position: relative;
+  z-index: 2;
 }
 
-.footer-info p {
+.footer-info p,
+footer p {
   color: #fff;
   margin: 0;
 }
@@ -578,7 +803,7 @@ footer a:hover {
   font-size: 1em;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .donation-effect-list {
     padding-left: 1em;
   }
@@ -639,7 +864,7 @@ label.error {
   color: #c41e3a;
 }
 
-input[type="checkbox"].error+div {
+input[type="checkbox"].error + div {
   background-color: red;
   padding: 2px;
 }
@@ -652,7 +877,7 @@ input[type="checkbox"].error+div {
     border: 2px solid #c41e3a;
 } */
 
-.error+img+input {
+.error + img + input {
   border: 2px solid #c41e3a;
 }
 
@@ -671,7 +896,6 @@ select.error {
 @media screen and (min-width: 48em) {
   form header h1 span {
     min-width: 500px;
-    margin-left: -12%;
   }
   .step-counter {
     position: absolute;
@@ -688,22 +912,23 @@ select.error {
   .hide-mobile {
     display: block;
   }
-
 }
 
 @media screen and (max-width: 767px) {
-
   form header {
     position: relative;
   }
 
-  body .content .logo-container {
-    z-index: 999;
-    right: 10px;
-    left: unset;
-    margin: unset;
-    min-width: auto;
-    width: auto;
+  .site-nav {
+    padding: 10px 16px;
+  }
+
+  .site-nav .logo {
+    height: 40px;
+  }
+
+  body .content .form-container {
+    margin-top: 70px;
   }
 
   form header h1 {
@@ -743,7 +968,7 @@ select.error {
   }
 
   .donation-effect-list {
-    background: url('../images/seal.png') no-repeat right bottom / 50px;
+    background: url("../images/seal.png") no-repeat right bottom / 50px;
   }
 
   body .content {
@@ -753,6 +978,22 @@ select.error {
   body .content,
   body form {
     padding: 0;
+    max-width: 95%;
+    margin: auto;
+  }
+
+  body .form-container .form-bottom-corner {
+    position: absolute;
+    bottom: 190px;
+    left: 0;
+    right: -200px;
+    margin: auto;
+    width: 100%;
+    max-width: 175px;
+    z-index: -1;
+  }
+  body .form-container .form-inner {
+    z-index: 1;
   }
 
   body form .form-container .form-inner {
@@ -816,6 +1057,10 @@ select.error {
 
 .accept-fees-container {
   flex-wrap: wrap;
+  padding: 2em 0;
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
 }
 
 .donation-grid-item label {
@@ -831,4 +1076,8 @@ select.error {
   font-size: 12px;
   font-weight: 600;
   padding-left: 10px;
+}
+
+.modal-content h3 {
+  color: black;
 }
