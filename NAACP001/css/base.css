@@ -183,15 +183,14 @@ a {
   width: 100%;
 }
 .page-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: 0 auto;
   background: url("../images/bg-2.webp") no-repeat center center / cover;
-  max-height: 90vh;
-  min-height: 90vh;
+  height: 100%;
   z-index: 1;
   width: 100%;
 }
@@ -200,18 +199,23 @@ form header {
   text-align: center;
   padding: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 form header h1 {
-  max-width: 400px;
   width: 100%;
   margin: auto;
   font-style: normal;
   color: var(--mainColor);
+}
+
+form header .text-container {
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
 }
 
 form header h1 span {
@@ -509,17 +513,50 @@ button:not(.close) {
 }
 
 .submit-container {
-  text-align: right;
+  padding: 2em 0;
+  background: var(--mainColor);
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
 }
 
-.submit-container img {
-  max-width: 250px;
-  margin: auto;
-  display: block;
+.submit-container .bottom-info-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5em;
 }
-.submit-container .charity-navigator {
-  max-width: 100px;
-  margin: 1em auto 0 auto;
+
+.submit-container .flair {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  height: 600px;
+  left: 0px;
+  top: -70px;
+}
+
+.submit-container .bg-scribble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1000px;
+  transform: scale(2.5);
+  fill: #001a4d;
+}
+
+.submit-container button {
+  background-color: var(--secondaryColor);
+  color: black;
+  font-family: var(--headingFont);
+}
+
+.submit-container ul li,
+.submit-container p {
+  color: #fff;
 }
 .bottom-info {
   bottom: 0;
@@ -575,11 +612,6 @@ button:not(.close) {
 
 .bottom-info {
   background: var(--tertiaryColor);
-}
-
-.submit-container {
-  padding: 2em 0;
-  background-color: var(--bgColor);
 }
 .bottom-info {
   overflow: hidden;
@@ -721,7 +753,6 @@ body form .fw-normal {
 footer {
   background-color: black;
   position: relative;
-  margin-top: 5em;
 }
 
 footer .scribble {
@@ -729,10 +760,13 @@ footer .scribble {
   fill: black;
   height: 50%;
   top: -12px;
+  z-index: 1;
 }
 
 .footer-info {
   padding: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-info p,
@@ -862,7 +896,6 @@ select.error {
 @media screen and (min-width: 48em) {
   form header h1 span {
     min-width: 500px;
-    margin-left: -12%;
   }
   .step-counter {
     position: absolute;

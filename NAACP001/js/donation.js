@@ -60,7 +60,7 @@ const donationParameters = {
   },
   processingFees: {
     show: true,
-    feePercentage: 0.03,
+    feePercentage: 0.04,
     prechecked: true,
     labelText: `I'd like to cover the fees associated with my donation so more of my donation goes directly to the NAACP. `,
     totalDonationText: "My new total is:",
