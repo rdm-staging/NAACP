@@ -797,10 +797,11 @@ body form .fw-normal {
   }
 }
 
-.step-2,
-.step-3 {
+.form-inner.step-2,
+.form-inner.step-3 {
   position: relative;
   margin-top: 10px;
+  padding-top: 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
