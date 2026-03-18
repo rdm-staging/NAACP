@@ -62,8 +62,8 @@ const donationParameters = {
     show: true,
     feePercentage: 0.04,
     prechecked: true,
-    labelText: `I'd like to cover the fees associated with my donation so more of my donation goes directly to the NAACP. `,
-    totalDonationText: "My new total is:",
+    labelText: `I'd like to cover the fees associated with my donation so more of my donation goes directly to NAACP.`,
+    totalDonationText: "My new monthly total is:",
   },
   minimumDonation: 20,
   maximumDonation: 500,
@@ -346,7 +346,7 @@ function errorHandling(errorMappingNum) {
     errorText.textContent = errorMapping[errorMappingNum];
     donationContainer.insertBefore(errorText, errorAppendReference);
     //show generic "Your donation" text instead of the invalid user input
-    $(".total-donation").text(`Your donation`);
+    $(".total-donation").text(``);
     donationFormSubmit.setAttribute("disabled", "disabled");
   }
 }
@@ -409,7 +409,7 @@ function otherAmountHandler(code, amt) {
   //empty out the previous value
   $("#giftAmount").val("");
   if (amt === "") {
-    $(".total-donation").text("Your donation");
+    $(".total-donation").text("");
     sessionStorage.setItem("total-donation", "");
   } else {
     $("#giftAmount").val(amt);
@@ -464,7 +464,7 @@ function calcTotalDonation(feesAccepted) {
   switch (donationAmt) {
     case undefined:
     case "undefined":
-      $(".total-donation").text("Your donation");
+      $(".total-donation").text("");
       break;
     default:
       //match user input from 'other' field against our regex pattern (no special chars, letters, or more than 2 decimals)
@@ -514,7 +514,7 @@ function processingFeesHandler() {
   const feesAccepted = sessionStorage.getItem("fees-accepted" || "");
   //general statement if donationAmt isn't set
   if (donationAmt == undefined || donationAmt === "") {
-    $(".total-donation").text("Your donation");
+    $(".total-donation").text("");
   } else {
     //if sessionStorage fees-accepted isnt set, or if it equals 1 - check the checkbox
     if (feesAccepted == 1) {

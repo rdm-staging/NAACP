@@ -55,7 +55,7 @@ body,
 input,
 select {
   font-family: var(--mainFont);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 img {
@@ -205,6 +205,18 @@ form header {
   margin-right: auto;
 }
 
+form header p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form header p span {
+  font-family: var(--headingFont);
+  display: block;
+  margin-top: 5px;
+}
+
 form header h1 {
   width: 100%;
   margin: auto;
@@ -227,7 +239,39 @@ form header h1 span {
 form header p,
 form header li {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 20px;
+}
+
+form header .text-headline {
+  font-family: var(--mainFont);
+  text-transform: none;
+  font-size: 30px;
+  line-height: 1.15em;
+  margin-bottom: 12px;
+  color: black;
+  margin-top: 20px;
+}
+
+form header .text-headline span {
+  font-weight: 900;
+  display: inline-block;
+  width: auto;
+  padding: 0 7px;
+  background: url("../images/swoosh.svg") no-repeat center 95% / contain;
+  padding-bottom: 5px;
+  font-family: var(--headingFont);
+}
+
+.opt-in-label {
+  font-size: 12px !important;
+  line-height: 18px !important;
+  color: #555;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #555;
+  margin-top: 8px;
 }
 
 form input,
@@ -301,7 +345,6 @@ form input:not(.gift-amount-other):hover {
 }
 
 .form-inner {
-  background: #fff;
   position: relative;
   padding: 30px 20px 20px;
   display: none;
@@ -364,8 +407,10 @@ form input:not(.gift-amount-other):hover {
   top: 120px;
 }
 
-.form-container form {
-  background-color: #fefefe;
+@media screen and (min-width: 48em) {
+  .form-container form {
+    background-color: #fefefe;
+  }
 }
 
 .donation-choice-container {
@@ -554,6 +599,47 @@ button:not(.close) {
   font-family: var(--headingFont);
 }
 
+.bottom-info-content p {
+  text-align: center;
+  margin: 20px auto;
+}
+.bottom-info-content ul {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  ul {
+    padding: 0;
+  }
+  .form-container .submit-container .bottom-info-content {
+    padding-top: 0px;
+  }
+  .bottom-info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-info-content p {
+    text-align: center;
+    order: 2;
+  }
+  .bottom-info-content .row {
+    order: 3;
+  }
+  .bottom-info-content .submit {
+    order: 1;
+  }
+  .form-button,
+  button:not(.close) {
+    width: 100%;
+    min-width: unset;
+  }
+  .trust-img {
+    max-width: 100px;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+}
 .submit-container ul li,
 .submit-container p {
   color: #fff;
@@ -715,7 +801,6 @@ body form .fw-normal {
 .step-3 {
   position: relative;
   margin-top: 10px;
-  padding: 40px 20px 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -725,10 +810,10 @@ body form .fw-normal {
 
 .mobile-hero {
   width: 100%;
-  background: url("../images/bg-mobile.jpg") no-repeat center 90% / 105%;
+  background: url("../images/bg-2.webp") no-repeat center 90% / cover;
   width: 90%;
   margin: auto;
-  min-height: 270px;
+  min-height: 220px;
 }
 
 .mobile-hero-container {
@@ -931,15 +1016,6 @@ select.error {
     margin-top: 70px;
   }
 
-  form header h1 {
-    position: absolute;
-    color: #fff;
-    font-size: 1.25em;
-    right: 10px;
-    bottom: 45%;
-    text-align: right;
-  }
-
   form header h1 span {
     font-size: 2.15em;
   }
@@ -1026,6 +1102,11 @@ select.error {
 
   .hide-mobile {
     display: none;
+  }
+
+  .form-inner {
+    padding: 10px;
+    background: transparent;
   }
 
   #container .row .p-0-on-small {
